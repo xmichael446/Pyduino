@@ -60,4 +60,3 @@ Enjoy using! Hope it'll help you someway!!!
 [Linkedin](https://www.linkedin.com/in/muhammadrasul-abdulhayev-6644821a9/)
 [Sololearn](https://www.sololearn.com/Profile/13162535)
 [Telegram](https://t.me/A_M_R_4_4_6)
-[E-mail](muhammadrasul446@mail.ru)
