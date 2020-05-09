@@ -2,7 +2,7 @@
 
 ### Arduino Control using Python.
 
-![arduino control](https://user-images.githubusercontent.com/64916997/81459438-5dfc1400-91b9-11ea-9d74-bc46d3f5dc73.png)
+![shot](https://user-images.githubusercontent.com/64916997/81485452-973e8d80-9266-11ea-83c8-7fb436ab90b9.png)
 
 ## User manual:
 
