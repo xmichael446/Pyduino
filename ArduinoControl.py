@@ -1,3 +1,4 @@
+
 # for UI:
 import PySimpleGUI as sg
 
@@ -25,15 +26,44 @@ else:
 # 12 ports to be contolled:
 digital_ports = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
+
 # Window elements' position, type and values, where needed:
-window_layout = [  
-		[sg.T('Arduino Control using Python!!!')],
+
+column_one = [
+		[sg.CB("Port 2", size=(8, 1))],
+		[sg.CB("Port 5", size=(8, 1))],
+		[sg.CB("Port 8", size=(8, 1))],
+		[sg.CB("Port 11", size=(8, 1))],
+]
+column_two = [
+		[sg.CB("Port 3", size=(8, 1))],
+		[sg.CB("Port 6", size=(8, 1))],
+		[sg.CB("Port 9", size=(8, 1))],
+		[sg.CB("Port 12", size=(8, 1))],
+]
+column_three = [
+		[sg.CB("Port 4", size=(8, 1))],
+		[sg.CB("Port 7", size=(8, 1))],
+		[sg.CB("Port 10", size=(8, 1))],
+		[sg.CB("Port 13", size=(8, 1))],
+]
+
+gitoverflow = [
+		[sg.T("Github: Muhammadrasul446", size=(28, 1))],
+		[sg.T("Stackoverflow: user:13490404", size=(28, 1))]
+]
+
+twittedin = [
+		[sg.T("Twitter: A_M_R_4_4_6", size=(28, 1))],
+		[sg.T("Linkedin: 6644821a9", size=(28, 1))]
+]
+
+window_layout = [
+		[sg.T('Made by Muhammadrasul Abdulhayev')],
 		[sg.T("Serial Port"), sg.In(port_annot, size=(20, 1), key='port'), sg.Button("Connect")],
-		[sg.CBox("Port 2", size=(8, 1)), sg.CBox("Port 3", size=(8, 1)), sg.CBox("Port 4", size=(8, 1))],
-		[sg.CBox("Port 5", size=(8, 1)), sg.CBox("Port 6", size=(8, 1)), sg.CBox("Port 7", size=(8, 1))],
-		[sg.CBox("Port 8", size=(8, 1)), sg.CBox("Port 9", size=(8, 1)), sg.CBox("Port 10", size=(8, 1))],
-		[sg.CBox("Port 11", size=(8, 1)), sg.CBox("Port 12", size=(8, 1)), sg.CBox("Port 13", size=(8, 1))],
-		[sg.Button("Send"), sg.Button("Exit"), sg.T(" ", size=(24, 1), key="error", text_color="red")]
+		[sg.Column(column_one),  sg.VerticalSeparator(pad=None), sg.Column(column_two),  sg.VerticalSeparator(pad=None), sg.Column(column_three)],
+		[sg.Button("Send"), sg.Button("Exit")],
+		[sg.Column(gitoverflow),  sg.VerticalSeparator(pad=None), sg.Column(twittedin)]
 ]
 
 # create a window object:
@@ -41,16 +71,18 @@ window = sg.Window('Arduino Control', window_layout)
 
 # keep the window open:
 while True:
-	event, values = window.read()
+	event, values = window()
 	# untill it's closed manually:
 	if event in (None, 'Exit'):
 		break
 
 	# setup the serial port:
 	elif event == "Connect":
-
-		board = pf.Arduino(values["port"])
-
+		try:
+			board = pf.Arduino(values["port"])
+			sg.popup_ok("Connected")
+		except:
+			sg.popup_error("Serial port is invalid!!!", text_color="red")
 	# change states of pins, according to checkboxes:
 	elif event == "Send":
 		for i in digital_ports:
