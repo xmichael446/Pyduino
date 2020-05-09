@@ -13,10 +13,10 @@
 ### Setup
 
 #### Go to a directory, in which you'd like to save it:
-`cd ~/Dir/Dir/dir`
+> `cd ~/Dir/Dir/dir`
 
 #### Then clone the repository:
-`git clone https://github.com/Muhammadrasul446/Pyduino.git`
+> `git clone https://github.com/Muhammadrasul446/Pyduino.git`
 
 #### Or download .zip archive:
 ![zip](https://user-images.githubusercontent.com/64916997/81459886-62293100-91bb-11ea-8c42-8f355dc8c021.png)
@@ -25,19 +25,19 @@
 
 This program requires only two modules - [PySimpleGUI](https://pypi.org/project/PySimpleGUI/) and [pyFirmata](https://pypi.org/project/pyFirmata/). You can install them straightly from terminal:
 
-`python -m pip install PySimpleGUI`
+> `python -m pip install PySimpleGUI`
 
 and:
 
-`python -m pip install pyFirmata`
+> `python -m pip install pyFirmata`
 
 [PySimpleGUI](https://pypi.org/project/PySimpleGUI/) requires another module, named [tkinter](https://wiki.python.org/moin/TkInter), it comes with python package, but it might be missing. In Windows you just install it like a python-module from the command line:
 
-`python -m pip install tkinter`
+> `python -m pip install tkinter`
 
 In Unix-like Systems u can install it like a package, from using your package manager:
 
-`sudo apt-get install python-tk`
+> `sudo apt-get install python-tk`
 
 ### Usage
 
