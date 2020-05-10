@@ -85,11 +85,20 @@ while True:
 			sg.popup_error("Serial port is invalid!!!", text_color="red")
 	# change states of pins, according to checkboxes:
 	elif event == "Send":
-		for i in digital_ports:
-			j = 0
-			while j < 12:
-				board.digital[i].write(values[j])
-				j += 1
-
+		try:
+			board.digital[2].write(values[0])
+			board.digital[2].write(values[4])
+			board.digital[2].write(values[8])
+			board.digital[2].write(values[1])
+			board.digital[2].write(values[5])
+			board.digital[2].write(values[9])
+			board.digital[2].write(values[2])
+			board.digital[2].write(values[6])
+			board.digital[2].write(values[10])
+			board.digital[2].write(values[3])
+			board.digital[2].write(values[7])
+			board.digital[2].write(values[11])
+		except NameError():
+			sg.popup_error("Serial port is invalid!!!", text_color="red")
 
 window.close() # when done, close.
