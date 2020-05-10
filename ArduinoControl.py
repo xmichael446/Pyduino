@@ -87,18 +87,18 @@ while True:
 	elif event == "Send":
 		try:
 			board.digital[2].write(values[0])
-			board.digital[2].write(values[4])
-			board.digital[2].write(values[8])
-			board.digital[2].write(values[1])
-			board.digital[2].write(values[5])
-			board.digital[2].write(values[9])
-			board.digital[2].write(values[2])
-			board.digital[2].write(values[6])
-			board.digital[2].write(values[10])
-			board.digital[2].write(values[3])
-			board.digital[2].write(values[7])
-			board.digital[2].write(values[11])
-		except NameError():
+			board.digital[3].write(values[4])
+			board.digital[4].write(values[8])
+			board.digital[5].write(values[1])
+			board.digital[6].write(values[5])
+			board.digital[7].write(values[9])
+			board.digital[8].write(values[2])
+			board.digital[9].write(values[6])
+			board.digital[10].write(values[10])
+			board.digital[11].write(values[3])
+			board.digital[12].write(values[7])
+			board.digital[13].write(values[11])
+		except NameError:
 			sg.popup_error("Serial port is invalid!!!", text_color="red")
 
 window.close() # when done, close.
