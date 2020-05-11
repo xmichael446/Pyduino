@@ -45,7 +45,6 @@ Where `*` is your python version.
 
 ### Build
 
-#### Board config
 
 For building binaries you'll need one more python module named [pyinstaller](https://pypi.org/project/PyInstaller/).
 You can just install it from terminal:
@@ -59,6 +58,8 @@ Go to the directory where you saved the files, and type:
 > `pyinstaller Pyduino.py --onefile`
 
 This will give several folders in your directory. The binary is in `dist` folder. Open it and run the program!
+
+#### Board config
 
 Before combining a program with your board, you need to upload a `StandardFirmata` sketch to your board. It comes with arduino example-sketches:
 
