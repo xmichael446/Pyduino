@@ -33,19 +33,19 @@ column_one = [
 		[sg.CB("Port 2", size=(8, 1))],
 		[sg.CB("Port 5", size=(8, 1))],
 		[sg.CB("Port 8", size=(8, 1))],
-		[sg.CB("Port 11", size=(8, 1))],
+		[sg.CB("Port 11", size=(8, 1))]
 ]
 column_two = [
 		[sg.CB("Port 3", size=(8, 1))],
 		[sg.CB("Port 6", size=(8, 1))],
 		[sg.CB("Port 9", size=(8, 1))],
-		[sg.CB("Port 12", size=(8, 1))],
+		[sg.CB("Port 12", size=(8, 1))]
 ]
 column_three = [
 		[sg.CB("Port 4", size=(8, 1))],
 		[sg.CB("Port 7", size=(8, 1))],
 		[sg.CB("Port 10", size=(8, 1))],
-		[sg.CB("Port 13", size=(8, 1))],
+		[sg.CB("Port 13", size=(8, 1))]
 ]
 
 gitoverflow = [

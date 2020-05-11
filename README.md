@@ -5,11 +5,11 @@
 ![shot](https://user-images.githubusercontent.com/64916997/81485452-973e8d80-9266-11ea-83c8-7fb436ab90b9.png)
 
 ## User manual:
-
-* [Download or clone repository](#setup)
-* [Install the modules](#modules)
-* [Connect and use](#usage)
-
+* Build it yourself:
+  * [Download or clone repository](#setup)
+  * [Install the modules](#modules)
+  * [Connect and use](#build)
+* [Download binaries](https://github.com/Muhammadrasul446/Pyduino/raw/master/Build/ArduinoControl)
 ### Setup
 
 #### Go to a directory, in which you'd like to save it:
@@ -25,38 +25,50 @@
 
 This program requires only two modules - [PySimpleGUI](https://pypi.org/project/PySimpleGUI/) and [pyFirmata](https://pypi.org/project/pyFirmata/). You can install them straightly from terminal:
 
-> `python -m pip install PySimpleGUI`
+> `python* -m pip install PySimpleGUI`
 
 and:
 
-> `python -m pip install pyFirmata`
+> `python* -m pip install pyFirmata`
+
+Where `*` is your python version.
 
 [PySimpleGUI](https://pypi.org/project/PySimpleGUI/) requires another module, named [tkinter](https://wiki.python.org/moin/TkInter), it comes with python package, but it might be missing. In Windows you just install it like a python-module from the command line:
 
-> `python -m pip install tkinter`
+> `python* -m pip install tkinter`
 
-In Unix-like Systems u can install it like a package, from using your package manager:
+In Unix-like Systems u can install it like a package, using your package manager:
 
-> `sudo apt-get install python-tk`
+> `sudo apt-get install python*-tk`
 
-### Usage
+Where `*` is your python version.
+
+### Build
 
 #### Board config
+
+For building binaries you'll need one more python module named [pyinstaller](https://pypi.org/project/PyInstaller/).
+You can just install it from terminal:
+
+> `python* -m install pyinstaller`
+
+Where `*` is your python version.
+
+Go to the directory where you saved the files, and type:
+
+> `pyinstaller Pyduino.py --onefile`
+
+This will give several folders in your directory. The binary is in `dist` folder. Open it and run the program!
 
 Before combining a program with your board, you need to upload a `StandardFirmata` sketch to your board. It comes with arduino example-sketches:
 
 ![StandardFirmata](https://user-images.githubusercontent.com/64916997/81460364-60ad3800-91be-11ea-9ca0-b596d00c166e.png)
 
-#### Open the program
-
-When you open, you'll see an input field, which is your serial port, a "Connect" button, which you should press after entering the serial port, 12 checkboxes, which are the states of 12 digital pins on your board, "Send" button, which changes the states of the pins according to checkboxes, and "Exit" button, which is the alternative for the red "cross" at the top right corner of the window.
-
-Enjoy using! Hope it'll help you someway!!!
 
 ### My Contacts
 
-[Twitter](https://twitter.com/A_M_R_4_4_6)
-[Stackoverflow](https://stackoverflow.com/users/13490404/muhammadrasul)
-[Linkedin](https://www.linkedin.com/in/muhammadrasul-abdulhayev-6644821a9/)
-[Sololearn](https://www.sololearn.com/Profile/13162535)
-[Telegram](https://t.me/A_M_R_4_4_6)
+**[Twitter](https://twitter.com/A_M_R_4_4_6)**
+**[Stackoverflow](https://stackoverflow.com/users/13490404/muhammadrasul)**
+**[Linkedin](https://www.linkedin.com/in/muhammadrasul-abdulhayev-6644821a9/)**
+**[Sololearn](https://www.sololearn.com/Profile/13162535)**
+**[Telegram](https://t.me/A_M_R_4_4_6)**
