@@ -24,7 +24,7 @@ else:
 	port_annot = "/dev/tty.usbserial"
 
 # 12 ports to be contolled:
-digital_ports = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+digital_ports = {2:0, 3:4, 4:8, 5:1, 6:5, 7:9, 8:2, 9:6, 10:10, 11:3, 12:7, 13:11}
 
 
 # Window elements' position, type and values, where needed:
@@ -86,18 +86,9 @@ while True:
 	# change states of pins, according to checkboxes:
 	elif event == "Send":
 		try:
-			board.digital[2].write(values[0])
-			board.digital[3].write(values[4])
-			board.digital[4].write(values[8])
-			board.digital[5].write(values[1])
-			board.digital[6].write(values[5])
-			board.digital[7].write(values[9])
-			board.digital[8].write(values[2])
-			board.digital[9].write(values[6])
-			board.digital[10].write(values[10])
-			board.digital[11].write(values[3])
-			board.digital[12].write(values[7])
-			board.digital[13].write(values[11])
+			for i in digital_ports.keys():
+				key = digital_ports[i]
+				board.digital[i].write(values[key])
 		except NameError:
 			sg.popup_error("Serial port is invalid!!!", text_color="red")
 
