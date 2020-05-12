@@ -1,8 +1,8 @@
-# Pyduino 
+# Pyduino-v1.1
 
 ### Arduino Control using Python.
 
-![shot](https://user-images.githubusercontent.com/64916997/81485452-973e8d80-9266-11ea-83c8-7fb436ab90b9.png)
+![Pyduino-v1 1](https://user-images.githubusercontent.com/64916997/81735420-7799a600-94ae-11ea-9413-97f89701ee21.png)
 
 ## User manual:
 * Build it yourself:
