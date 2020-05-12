@@ -11,17 +11,8 @@ theme = 'DarkBlack1'
 # set the theme:
 sg.theme(theme)
 
-# Your Operating System. You can skip this, coz it's just for determining corect serial port
-
-OS = "Unix"
-port_annot = " "
-
-if OS == "Unix":
-	port_annot = "/dev/ttyACM0"
-elif OS == "Windows":
-	port_annot = "COM"
-else:
-	port_annot = "/dev/tty.usbserial"
+# Boolean to check connection
+connected = False
 
 # 12 ports to be contolled:
 digital_ports = {2:0, 3:4, 4:8, 5:1, 6:5, 7:9, 8:2, 9:6, 10:10, 11:3, 12:7, 13:11}
@@ -48,6 +39,7 @@ column_three = [
 		[sg.CB("Port 13", size=(8, 1))]
 ]
 
+
 gitoverflow = [
 		[sg.T("Github: Muhammadrasul446", size=(28, 1))],
 		[sg.T("Stackoverflow: user:13490404", size=(28, 1))]
@@ -60,7 +52,7 @@ twittedin = [
 
 window_layout = [
 		[sg.T('Made by Muhammadrasul Abdulhayev')],
-		[sg.T("Serial Port"), sg.In(port_annot, size=(20, 1), key='port'), sg.Button("Connect")],
+		[sg.T("Serial Port"), sg.In("/dev/ttyACM0", size=(20, 1), key='port'), sg.Button("Connect")],
 		[sg.Column(column_one),  sg.VerticalSeparator(pad=None), sg.Column(column_two),  sg.VerticalSeparator(pad=None), sg.Column(column_three)],
 		[sg.Button("Send"), sg.Button("Exit")],
 		[sg.Column(gitoverflow),  sg.VerticalSeparator(pad=None), sg.Column(twittedin)]
@@ -78,18 +70,25 @@ while True:
 
 	# setup the serial port:
 	elif event == "Connect":
-		try:
-			board = pf.Arduino(values["port"])
-			sg.popup_ok("Connected")
-		except:
-			sg.popup_error("Serial port is invalid!!!", text_color="red")
+		if not connected:
+			try:
+				board = pf.Arduino(values["port"])
+				sg.popup_ok("Connected")
+				connected = True
+			except:
+				sg.popup_error("Serial port is invalid!!!", text_color="red")
+				connected = False
+		else:
+			sg.popup_ok("Already connected")
 	# change states of pins, according to checkboxes:
 	elif event == "Send":
-		try:
+		if connected:
 			for i in digital_ports.keys():
-				key = digital_ports[i]
-				board.digital[i].write(values[key])
-		except NameError:
-			sg.popup_error("Serial port is invalid!!!", text_color="red")
+				state = values[digital_ports[i]]
+				board.digital[i].write(state)
+		else:
+			sg.popup_error("Connect the serial port first!", text_color="red")
+			connected = False
+
 
 window.close() # when done, close.
