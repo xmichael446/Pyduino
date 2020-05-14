@@ -14,7 +14,7 @@
   * [Download or clone repository](#setup)
   * [Install the modules](#modules)
   * [Connect and use](#build)
-* [Download binaries](https://github.com/Muhammadrasul446/Pyduino/raw/master/Build/ArduinoControl)
+* [Download binaries](https://github.com/Muhammadrasul446/Pyduino/releases/download/v1.2/Pyduino)
 ### Setup
 
 #### Go to a directory, in which you'd like to save it:
