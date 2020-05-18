@@ -4,7 +4,7 @@ import PySimpleGUI as sg
 import pyfirmata as pf
 
 # any preferred appearance of the UI:
-theme = 'DarkAmber'
+theme = 'DarkBlack1'
 
 # set the theme:
 sg.theme(theme); del theme
@@ -182,4 +182,4 @@ while True:
 		second_window.close(); del second_window # when done, close.
 	break
 
-window.close()
+window.close(); del window
