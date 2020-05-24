@@ -12,7 +12,7 @@ sg.theme(theme); del theme
 # Boolean to check connection
 connected = False
 
-# VAriable to keep board's type and dictionaries for ports
+# Variable to keep board's type and dictionaries for ports
 board_type = " "
 digital_ports = pwm_ports_values = pwm_ports = dict()
 
@@ -27,8 +27,7 @@ twittedin = [
 		[sg.T("Linkedin: 6644821a9", size=(28, 1))]
 ]
 
-
-
+# Window layout for selecting boards
 select_win_lay = [
 			[sg.T('Select your board:')],
 			[sg.Button("Nano/Uno/Leonardo")],
@@ -92,7 +91,6 @@ while True:
 					[sg.T('Port ~' + str(i), size=(8, 1)), sg.Spin([j for j in range(0, 51)], size=(2, 2))] for i in range(2, 14)
 			]
 			mega_col_1.append([sg.CB("Port 14", size=(8, 1))])
-
 
 			mega_col_2 = [
 					[sg.CB('Port ' + str(i), size=(8, 1))] for i in range(15, 28)
