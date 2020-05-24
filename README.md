@@ -2,6 +2,8 @@
 
 ### Arduino Control using Python.
 
+> I am not a pro developer, so don't mind if there is any shitcode
+
 ![image](https://user-images.githubusercontent.com/64916997/81878227-ddfef100-95a0-11ea-89ff-57fc1a04abe9.png)
 
 ![image](https://user-images.githubusercontent.com/64916997/81878142-94160b00-95a0-11ea-9b6e-e060caeb3c48.png)
