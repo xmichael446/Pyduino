@@ -16,7 +16,7 @@
   * [Download or clone repository](#setup)
   * [Install the modules](#modules)
   * [Connect and use](#build)
-* [Download binaries](https://github.com/Muhammadrasul446/Pyduino/releases/download/v1.2/Pyduino)
+* [Download binaries](https://github.com/Muhammadrasul446/Pyduino/releases/download/v1.2/Pyduino) (linux only)
 ### Setup
 
 #### Go to a directory, in which you'd like to save it:
