@@ -56,7 +56,7 @@ Where `*` is your python version.
 For building binaries you'll need one more python module named [pyinstaller](https://pypi.org/project/PyInstaller/).
 You can just install it from terminal:
 
-> `python* -m install pyinstaller`
+> `python* -m pip install pyinstaller`
 
 Where `*` is your python version.
 
